@@ -7,6 +7,6 @@ def func(x):
     return np.exp(x**2) + 2*x
 
 # Menggunakan fungsi bawaan scipy yaitu integrasi romberg
-romberg = integrate.romberg(func, 0, 2, show=True)
+romberg = integrate.romberg(func, 0, 1, show=True)
 
-print(romberg)
+print(f'Result : {romberg}')

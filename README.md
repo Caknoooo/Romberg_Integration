@@ -64,7 +64,7 @@ Secara umum rumusnya adalah sebagai berikut:
 
 ## Code
 
-Ada berbagai cara dalam pemrograman untuk menyelesaikan `Metode Remborg` 
+Ada berbagai cara dalam pemrograman untuk menyelesaikan `Metode Rpmberg` 
 
 #### Menggunakan fungsi bawaan SciPy dengan import integrate
 
@@ -90,7 +90,7 @@ print(romberg)
 import numpy as np
 import sys
 
-class RombregIntegration:
+class RombergIntegration:
     def __init__(self, a, b, n, exact) -> None:
         self.initialize(a, b, n, exact)
         self.initTrapezhoid()
@@ -131,16 +131,16 @@ class RombregIntegration:
         return self.data[-1, -1]
 
 
-rombreg = RombregIntegration(0, 1, 5, 0.7212691982)
-rombreg.calculate()
-result = rombreg.result()
+romberg = RombergIntegration(0, 1, 5, 0.7212691982)
+romberg.calculate()
+result = romberg.result()
 print(result)
 ```
 ![6](https://user-images.githubusercontent.com/92671053/208718101-59f1ec12-1c2e-412f-9f00-8ab6166c9d41.PNG)
 
 
 ## Jupyter Notebook
-([Romberg Integration](https://github.com/Caknoooo/Romberg_Integration/blob/main/RombergIntegration_Notebook.ipynb)) | RombregIntegration Using Notebook
+([Romberg Integration](https://github.com/Caknoooo/Romberg_Integration/blob/main/RombergIntegration_Notebook.ipynb)) | RombergIntegration Using Notebook
 
 ## Referensi
 

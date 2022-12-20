@@ -1,14 +1,12 @@
 
 # Integrasi Romberg
 
-## Kelompok 5 Komputasi Numerik C
-
-## Identitas Anggota
 | Nama                      | NRP        |
 |---------------------------|------------|
 |Yoel Mountanus Sitorus     | 5025211078 |
 |Darren Prasetya            | 5025211162 |
 |M Naufal Badruttamam       | 5025211240 |
+
 
 
 
@@ -33,20 +31,23 @@ Dengan menggunakan rekursif yang dilakukan secara terus menerus oleh metode Trap
 Jika kita mulai dengan suatu fungsi ```T(f, m)``` dimana T adalah fungsi trapesium, f adalah fungsi yang akan diintegrasikan, 
 dan m adalah jumlah panel untuk diintegrasikan, maka:
 
-![1](https://user-images.githubusercontent.com/92671053/208663483-0b59c7d6-e65a-4d2f-83de-e381ccbd7c40.PNG)
+<p align="center" width="100%">
+    ![1](https://user-images.githubusercontent.com/92671053/208663483-0b59c7d6-e65a-4d2f-83de-e381ccbd7c40.PNG)
+</p>
 
 Dimana S adalah aturan Simpson yang akan diintegrasikan sebagai
 
 ```bash
-  T = (f, 0) = (b - a)(f(b) + f(a)) = 2
+T = (f, 0) = (b - a)(f(b) + f(a)) = 2
 ```
 
 Maka fungsi rekursif akan selesai, karena berdasarkan hubungan tersebut, fraksi yang diberikan dalam persamaan diatas juga merupakan perkiraan untuk integral.
 
 Secara umum rumusnya adalah sebagai berikut:
 
-![2](https://user-images.githubusercontent.com/92671053/208665099-fa684fa8-3c79-409d-815b-957d7fac5eb8.PNG)
-
+<p align="center" width="100%">
+    ![2](https://user-images.githubusercontent.com/92671053/208665099-fa684fa8-3c79-409d-815b-957d7fac5eb8.PNG)
+</p>
 
 
 
@@ -61,7 +62,6 @@ Secara umum rumusnya adalah sebagai berikut:
 5. Menghitung Integrasi pada kolom pertama dengan menggunakan rumus:
 ![3](https://user-images.githubusercontent.com/92671053/208666808-bde01be4-001d-44d9-807b-fd9ff73d7eba.PNG)
 6. Menghitung nilai integrasi pada kolom kedua sampai n dengan menggunakan rumus integrasi Romberg:
-
 ![4](https://user-images.githubusercontent.com/92671053/208667023-f430f9e4-3ff2-423e-b406-0241e0d94be6.PNG)
 
 
@@ -70,7 +70,7 @@ Secara umum rumusnya adalah sebagai berikut:
 
 Ada berbagai cara dalam pemrograman untuk menyelesaikan `Metode Remborg` 
 
-#### Menggunakan fungsi bawaan SciPy dengan mengimport integrate
+#### Menggunakan fungsi bawaan SciPy dengan import integrate
 
 ```py
 import numpy as np

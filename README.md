@@ -1,27 +1,23 @@
 
 # Integrasi Romberg
 
-| Nama                      | NRP        |
-|---------------------------|------------|
-|Yoel Mountanus Sitorus     | 5025211078 |
-|Darren Prasetya            | 5025211162 |
-|M Naufal Badruttamam       | 5025211240 |
-
-
-
-
+| Nama                      | NRP        | Github                              |
+|---------------------------|------------|-------------------------------------|
+|Yoel Mountanus Sitorus     | 5025211078 |[Yoel](https://github.com/zemetia/)  |
+|Darren Prasetya            | 5025211162 |[Darren](https://github.com/Mikask1/)|
+|M Naufal Badruttamam       | 5025211240 |[Cakno](https://github.com/Caknoooo/)|
 
 ## 🚀 Penjelasan Singkat Integrasi Romberg
 Integrasi Romberg merupakan salah satu metode ekstrapolasi yang didasarkan pada perluasan ekstrapolasi Richardson, dimana pada setiap penerapan ekstrapolasi Richadson akan menaikkan orde galat pada hasil solusinya sebesar dua. (Google)
 
-Metode Romberg merupakan metode integrasi yang didasarka pada perluasan ``` ekstrapolasi  Richardson``` 
-yang dihasilkan dari aturan ``` Metode Trapesium``` yang dilakukan secara terus menerus (Rekursif). Kelemahan dari metode ini adalah harus menggunakan jumlah interval 
+Metode Romberg merupakan metode integrasi yang didasarka pada perluasan ```Ekstrapolasi  Richardson``` 
+yang dihasilkan dari aturan ```Metode Trapesium``` yang dilakukan secara terus menerus (Rekursif). Kelemahan dari metode ini adalah harus menggunakan jumlah interval 
 yang besar guna mencapai akurasi yang diharapkan. Untuk meningkatkan akurasi kita harus melakukan rekursi terus menerus sampai nilai integral yang dihitung mendekati nilai 
 2^k yang konvergen pada suatu nilai
 
 Pada dasarnya, seperti halnya algoritma integrasi adaptif, Integrasi Romberg adalah perluasan yang relatif mudah dari keluarga algoritma Newton-Cotes.
 Keduanya bekerja dengan menggunakan iterasi yang disempurnakan dari beberapa metode Newton-Cotes yang mendasarinya untuk memberikan perkiraan nilai integral yang 
-cenderung lebih akurat. Tidak seperti ``` Metode Rieman``` yang masih terbilang kurang akurat.
+cenderung lebih akurat. Tidak seperti ```Metode Rieman``` yang masih terbilang kurang akurat.
 
 Integrasi Romberg bukanlah pendekatan adaptif terhadap intergrasi. Gal tersebut berarti metode Romberg tiddak mengubah perilakunya sendiri berdasarkan perilaku fungsi yang akan
 diintegrasikan. Sebaliknya, kita juga dapat mengeksploitasi perilaku fungsi trapesiumm pada batas untuk menghasilkan estimasi integral
@@ -57,6 +53,7 @@ Secara umum rumusnya adalah sebagai berikut:
 4. Menentukan nilai interval pada selang [a, b] atau bisa dengan [x2, x1] lalu menghitung h nya dengan cara: 
    `h = x2 - x1`
 5. Menghitung Integrasi pada kolom pertama dengan menggunakan rumus:
+
 ![3](https://user-images.githubusercontent.com/92671053/208666808-bde01be4-001d-44d9-807b-fd9ff73d7eba.PNG)
 6. Menghitung nilai integrasi pada kolom kedua sampai n dengan menggunakan rumus integrasi Romberg:
 
@@ -119,7 +116,7 @@ class RombregIntegration:
 
             # Menggunakan aturan trapezhoid yang di rekursi secara terus menerus
             self.data[j, 0] = self.data[j - 1, 0] / 2
-            self.data[j, 0] += self.h * np.sum(self.fn(self.a + i * self.h) for i in range(1, 2 ** j + 1, 2))
+            self.data[j, 0] += self.h * sum(self.fn(self.a + i * self.h) for i in range(1, 2 ** j + 1, 2))
 
             # Dengan bantuan extrapolation richardson
             for k in range(1, j + 1):
@@ -142,7 +139,7 @@ print(result)
 
 
 ## Jupyter Notebook
-[Rombreg Integration](/RombregIntegration_Notebook) | RombregIntegration Using Notebook
+[Rombreg Integration](/RombregIntegration_Notebook) | Romberg Integration Using Notebook
 
 ## Referensi
 

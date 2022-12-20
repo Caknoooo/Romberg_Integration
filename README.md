@@ -57,7 +57,9 @@ Secara umum rumusnya adalah sebagai berikut:
 4. Menentukan nilai interval pada selang [a, b] atau bisa dengan [x2, x1] lalu menghitung h nya dengan cara: 
    `h = x2 - x1`
 5. Menghitung Integrasi pada kolom pertama dengan menggunakan rumus:
+
 ![3](https://user-images.githubusercontent.com/92671053/208666808-bde01be4-001d-44d9-807b-fd9ff73d7eba.PNG)
+
 6. Menghitung nilai integrasi pada kolom kedua sampai n dengan menggunakan rumus integrasi Romberg:
 
 ![4](https://user-images.githubusercontent.com/92671053/208667023-f430f9e4-3ff2-423e-b406-0241e0d94be6.PNG)
@@ -142,7 +144,7 @@ print(result)
 
 
 ## Jupyter Notebook
-[Rombreg Integration](/RombregIntegration_Notebook) | RombregIntegration Using Notebook
+([Romberg Integration](https://github.com/Caknoooo/Romberg_Integration/blob/main/RombergIntegration_Notebook.ipynb)) | RombregIntegration Using Notebook
 
 ## Referensi
 

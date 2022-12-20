@@ -1,7 +1,7 @@
 import numpy as np
 import sys
 
-class RombregIntegration:
+class RombergIntegration:
     def __init__(self, a, b, n, exact) -> None:
         self.initialize(a, b, n, exact)
         self.initTrapezhoid()
@@ -42,7 +42,7 @@ class RombregIntegration:
         return self.data[-1, -1]
 
 
-rombreg = RombregIntegration(0, 1, 5, 0.7212691982)
-rombreg.calculate()
-result = rombreg.result()
+romberg = RombergIntegration(0, 1, 5, 0.7212691982)
+romberg.calculate()
+result = romberg.result()
 print(f'Result : {result}')

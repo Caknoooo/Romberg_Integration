@@ -74,13 +74,18 @@ import matplotlib.pyplot as plt
 from scipy import integrate
 
 # misal mau mencari integral dari [0 - 2] dari ex^2 + 2x
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import integrate
+
+# misal mau mencari integral dari [0 - 2] dari ex^2 + 2x
 def func(x):
     return np.exp(x**2) + 2*x
 
 # Menggunakan fungsi bawaan scipy yaitu integrasi romberg
-romberg = integrate.romberg(func, 0, 2, show=True)
+romberg = integrate.romberg(func, 0, 1, show=True)
 
-print(romberg)
+print(f'Result : {romberg}')
 ```
 ![5](https://user-images.githubusercontent.com/92671053/208717314-29249433-1c1e-474b-acf9-a94896f61b23.PNG)
 
@@ -140,7 +145,7 @@ print(result)
 
 
 ## Jupyter Notebook
-([Romberg Integration](https://github.com/Caknoooo/Romberg_Integration/blob/main/RombergIntegration_Notebook.ipynb)) | RombergIntegration Using Notebook
+([Romberg Integration](https://github.com/Caknoooo/Romberg_Integration/blob/main/RombergIntegration_Notebook.ipynb)) | Romberg Integration Using Notebook
 
 ## Referensi
 

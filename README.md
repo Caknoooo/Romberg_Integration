@@ -41,9 +41,13 @@ Dimana S adalah aturan Simpson yang akan diintegrasikan sebagai
   T = (f, 0) = (b - a)(f(b) + f(a)) = 2
 ```
 
-Maka fungsi rekursif akan selesai. Sehingga diperoleh rumus:
+Maka fungsi rekursif akan selesai, karena berdasarkan hubungan tersebut, fraksi yang diberikan dalam persamaan diatas juga merupakan perkiraan untuk integral.
+
+Secara umum rumusnya adalah sebagai berikut:
 
 ![2](https://user-images.githubusercontent.com/92671053/208665099-fa684fa8-3c79-409d-815b-957d7fac5eb8.PNG)
+
+
 
 
 
@@ -57,6 +61,38 @@ Maka fungsi rekursif akan selesai. Sehingga diperoleh rumus:
 5. Menghitung Integrasi pada kolom pertama dengan menggunakan rumus:
 ![3](https://user-images.githubusercontent.com/92671053/208666808-bde01be4-001d-44d9-807b-fd9ff73d7eba.PNG)
 6. Menghitung nilai integrasi pada kolom kedua sampai n dengan menggunakan rumus integrasi Romberg:
+
 ![4](https://user-images.githubusercontent.com/92671053/208667023-f430f9e4-3ff2-423e-b406-0241e0d94be6.PNG)
 
+
+
+## Code
+
+Ada berbagai cara dalam pemrograman untuk menyelesaikan `Metode Remborg` 
+
+#### Menggunakan fungsi bawaan SciPy dengan mengimport integrate
+
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import integrate
+
+# misal mau mencari integral dari [0 - 2] dari ex^2 + 2x
+def func(x):
+    return np.exp(x**2) + 2*x
+
+# Menggunakan fungsi bawaan scipy yaitu integrasi romberg
+romberg = integrate.romberg(func, 0, 2, show=True)
+
+print(romberg)
+```
+
+
+## Referensi
+
+Github : 
+[mohrosidi](https://github.com/mohrosidi/metode_numerik/blob/master/09-diferensiasi_dan_integrasi.Rmd)
+
+Youtube : [Shams ElFouly](https://youtu.be/2BxLDODvnQA) , 
+[Poetro Sambegoro](https://youtu.be/Dj1Gzy52nNk)
 
